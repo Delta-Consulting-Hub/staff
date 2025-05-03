@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Call Audio Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎧 Call Audio Panel</h1>
+  <div class="grid">
+    <button class="button" onclick="playAudio('audio1')">Hello</button>
+    <button class="button" onclick="playAudio('audio2')">Introduction Rahul</button>
+    <button class="button" onclick="playAudio('audio3')">Introduction No</button>
+    <button class="button" onclick="playAudio('audio4')">Introduction Yes 1</button>
+    <button class="button" onclick="playAudio('audio5')">Their Website</button>
+    <button class="button" onclick="playAudio('audio6')">Offer</button>
+    <button class="button" onclick="playAudio('audio7')">Sample Website</button>
+    <button class="button" onclick="playAudio('audio8')">See Sample and tell</button>
+    <button class="button" onclick="playAudio('audio9')">Features</button>
+    <button class="button" onclick="playAudio('audio10')">End</button>
+    <button class="button" onclick="playAudio('audio11')">Don't Have Time</button>
+    <button class="button" onclick="playAudio('audio12')">No</button>
+    <button class="button" onclick="playAudio('audio13')">AI call</button>
+    <button class="button" onclick="playAudio('audio14')">Developer page</button>
+    <button class="button" onclick="playAudio('audio15')">Bye</button>
+    <button class="button" onclick="playAudio('audio16')">Don't know</button>
+    <button class="button" onclick="playAudio('audio17')">Business AI</button>
+  </div>
+
+  <!-- Audio Tags -->
+  <audio id="audio1" src="/audio/audio1.mp3"></audio>
+  <audio id="audio2" src="/audio/audio2.mp3"></audio>
+  <audio id="audio3" src="/audio/audio3.mp3"></audio>
+  <audio id="audio4" src="/audio/audio4.mp3"></audio>
+  <audio id="audio5" src="/audio/audio5.mp3"></audio>
+  <audio id="audio6" src="/audio/audio6.mp3"></audio>
+  <audio id="audio7" src="/audio/audio7.mp3"></audio>
+  <audio id="audio8" src="/audio/audio8.mp3"></audio>
+  <audio id="audio9" src="/audio/audio9.mp3"></audio>
+  <audio id="audio10" src="/audio/audio10.mp3"></audio>
+  <audio id="audio11" src="/audio/audio11.mp3"></audio>
+  <audio id="audio12" src="/audio/audio12.mp3"></audio>
+  <audio id="audio13" src="/audio/audio13.mp3"></audio>
+  <audio id="audio14" src="/audio/audio14.mp3"></audio>
+  <audio id="audio15" src="/audio/audio15.mp3"></audio>
+  <audio id="audio16" src="/audio/audio16.mp3"></audio>
+  <audio id="audio17" src="/audio/audio17.mp3"></audio>
+
+  <script>
+    function playAudio(id) {
+      const audios = document.querySelectorAll('audio');
+      audios.forEach(audio => audio.pause());
+      const audio = document.getElementById(id);
+      audio.currentTime = 0;
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
